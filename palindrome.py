@@ -1,6 +1,3 @@
-from sqlalchemy import false, true
-
-
 target = "A man, a plan, a canal: Panama"  # this, return ture
 
 
