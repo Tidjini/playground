@@ -33,7 +33,7 @@ import cv2
 import pyscreenshot as pys
 
 forcc = cv2.VideoWriter_fourcc(*"XVID")
-out = cv2.VideoWriter("outpst.avi", forcc, 8, (1920, 1080))
+out = cv2.VideoWriter("output.avi", forcc, 8, (1920, 1080))
 
 
 while True:
