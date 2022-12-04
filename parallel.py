@@ -1,6 +1,5 @@
 from concurrent.futures import ThreadPoolExecutor
 import time
-import asyncio
 
 
 # if __name__ == "__main__":
@@ -22,7 +21,7 @@ async def do_sleep():
 
 with ThreadPoolExecutor(max_workers=2) as executer:
     # stuffs = [("read", 2), ("delete", 1), ("write", 5), ("update", 3)]
-    k = executer.submit(asyncio.run, do_sleep())
+    k = executer.submit(do_sleep)
     f = executer.submit(do_something)
     print(f.result())
     print(k.result())
