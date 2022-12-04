@@ -18,6 +18,15 @@ with ThreadPoolExecutor() as executor:
     for f in as_completed(results):
         print(f.result())
 
+    # we can use the executor.map to return the result directly
+    print("With map function")
+    results = executor.map(do_something, secs)
+    for result in results:
+        print(f"{result}")
+
+    # with the 'with' operator the program wait until this threads are done without waiting
+    # for join to be called
+
 end = time.perf_counter()
 
 print("Program ends with {:.2f}".format(end - start), "second(s)")
