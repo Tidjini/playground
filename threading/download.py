@@ -31,3 +31,10 @@ with ThreadPoolExecutor() as executor:
 end = time.perf_counter()
 
 print("Downloads end with {:.2f}".format(end - start), "second(s)")
+
+
+# Note: this (Threads in general) works fine for IO bound, Reading and writing data
+# get from Internet or File, But for CPU Bound, threads does not work fine, for example:
+# download image and process some functionality, like resize and resolution processing,
+# threads may proceed slower.
+# for processing thing about using Multi Processing Instead of Threading
